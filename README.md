@@ -7,4 +7,5 @@ This wiki will list each [Leaf](https://docs.vapor.codes/3.0/leaf/getting-starte
 
 ## List Of leaf files
 
-- [head](#)
+- [frame](#)
+- [head](https://github.com/TerrickMansur/JustViewsRes-SBAdmin/wiki/Head)
