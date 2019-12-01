@@ -1,11 +1,11 @@
-//
-//  File.swift
-//  
-//
-//  Created by Terrick Mansur on 24/10/2019.
-//
+# JustView - SBAdmin
+
+This is the SBAdmin template leaf files for JustView. If you are not familiar with [JustViews](https://github.com/TerrickMansur/JustViews), please refer to the [JustViews](https://github.com/TerrickMansur/JustViews) wiki.
 
 
-SB Admin is a free bootstrap HTML template that you can download for free here:
+This wiki will list each [Leaf](https://docs.vapor.codes/3.0/leaf/getting-started/) file provided by this temple. Please refer to the wiki for an explanation of how to use each file.
 
-https://github.com/BlackrockDigital/startbootstrap-sb-admin
+## List Of leaf files
+
+- [frame](#)
+- [head](https://github.com/TerrickMansur/JustViewsRes-SBAdmin/wiki/Head)
