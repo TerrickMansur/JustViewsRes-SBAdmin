@@ -1,0 +1,59 @@
+<!-- Sidebar - Brand -->
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+	<div class="sidebar-brand-icon rotate-n-15">
+		<i class="#(page.frame.sideMenu.topHomeIcon)"></i>
+		<i class="fas home-lg-alt"></i>
+ 	</div>
+	<div class="sidebar-brand-text mx-3">#(page.frame.sideMenu.topHomeTitle) <sup>#(page.frame.sideMenu.topHomeTitleSub)</sup></div>
+</a>
+
+
+
+#for(menuItem in page.frame.sideMenu.menuItems) {
+    #if(menuItem.caseValue == 0) {
+    	#if(menuItem.primaryData == 0) {
+    	    <hr class="sidebar-divider my-0">
+    	} else {
+    	    <hr class="sidebar-divider">
+	    }
+	} else if(menuItem.caseValue == 1) {
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        #(menuItem.primaryData)
+      </div>
+	} else if(menuItem.caseValue == 2) {
+	 <!-- Menu Item -->
+      <li class="nav-item#(menuItem.fithdaryData)">
+        <a class="nav-link" href="#(menuItem.thirdaryData)" alt="#(menuItem.forthdaryData)">
+			<i class="fas #(menuItem.primaryData)"></i>
+          <span>#(menuItem.secondaryData)</span></a>
+      </li>
+	} else if(menuItem.caseValue == 3) {
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse#(menuItem.secondaryData)" aria-expanded="true" aria-controls="collapse#(menuItem.secondaryData)">
+          <i class="fas #(menuItem.primaryData)"></i>
+          <span>#(menuItem.secondaryData)</span>
+        </a>
+        <div id="collapse#(menuItem.secondaryData)" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+			#for(subMenus in menuItem.linksData) {
+	            <h6 class="collapse-header">#(subMenus.title)</h6>
+				#for(link in subMenus.links) {
+					#if(link.active == "true") {
+			            <a class="collapse-item active" href="#(link.url)" alt="#(link.alt)" >#(link.name)</a>
+			        } else {
+			            <a class="collapse-item" href="#(link.url)" alt="#(link.alt)" >#(link.name)</a>
+			        }
+	        	}
+			}
+          </div>
+        </div>
+      </li>
+    }
+}
+
+<!-- Sidebar Toggler (Sidebar) -->
+<div class="text-center d-none d-md-inline">
+	<button class="rounded-circle border-0" id="sidebarToggle"></button>
+</div>
