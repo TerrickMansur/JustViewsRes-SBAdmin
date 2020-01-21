@@ -1,0 +1,11 @@
+#for(row in page.grid.rows) {
+  <div class="row">
+    #for(component in row) {
+        <div class="col">
+        #if(component.table.type == "table") {
+            #embed("JustViewsRes-SBAdmin/table")
+        }
+        </div>
+      }
+  </div>
+}

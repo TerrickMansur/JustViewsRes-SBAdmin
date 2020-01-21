@@ -1,0 +1,9 @@
+#for(row in page.grid.rows) {
+  <div class="row">
+    #for(component in row) {
+        <div class="col">
+        <center>#(component.table.type)</center>
+        </div>
+      }
+  </div>
+}
