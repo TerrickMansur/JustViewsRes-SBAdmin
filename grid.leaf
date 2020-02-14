@@ -2,8 +2,11 @@
   <div class="row">
     #for(component in row) {
         <div class="col">
-        #if(component.table.type == "table") {
+        #if(component.type == "table") {
             #embed("JustViewsRes-SBAdmin/table")
+        }
+        #if(component.type == "form") {
+            #embed("JustViewsRes-SBAdmin/form")
         }
         </div>
       }
